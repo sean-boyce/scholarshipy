@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 // import { Link } from 'react-router-dom';
+import Dashboard from '../Dashboard/Dashboard';
 import './style.css';
-import AppHeader from './AppHeader';
-import ScholarshipList from '../Scholarship/ScholarshipList';
 
 class App extends Component {
 
@@ -11,9 +10,7 @@ class App extends Component {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('App', className)} {...props}>
-        <AppHeader />
-
-        <ScholarshipList />
+        <Dashboard />
       </div>
     );
   }

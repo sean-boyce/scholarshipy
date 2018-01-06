@@ -25,7 +25,7 @@ class ScholarshipList extends Component {
       />
     ));
     return (
-      <div>
+      <div className='scholarship-list'>
         {scholarships}
       </div>
     );
