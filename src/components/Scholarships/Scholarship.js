@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 // import classnames from 'classnames';
 import './style.css';
+// eslint-disable-next-line
 import {Card, CardActions, CardHeader, CardText} from 'material-ui/Card';
 import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn} from 'material-ui/Table';
-import FlatButton from 'material-ui/FlatButton';
 
 class Scholarship extends Component {
 
@@ -17,25 +17,34 @@ class Scholarship extends Component {
             actAsExpander={true}
             showExpandableButton={true}
           />
-          <CardActions>
-            <FlatButton label="Action1" />
-            <FlatButton label="Action2" />
-          </CardActions>
           <CardText expandable={true}>
             Scholarships offered by {this.props.school}
             <Table>
-              <TableHeader>
+              <TableHeader
+                displaySelectAll={false}
+                adjustForCheckbox={false}
+              >
                 <TableRow>
-                  <TableHeaderColumn>ID</TableHeaderColumn>
                   <TableHeaderColumn>Name</TableHeaderColumn>
-                  <TableHeaderColumn>Status</TableHeaderColumn>
+                  <TableHeaderColumn>Type</TableHeaderColumn>
+                  <TableHeaderColumn>Amount</TableHeaderColumn>
+                  <TableHeaderColumn>GPA</TableHeaderColumn>
+                  <TableHeaderColumn>ACT</TableHeaderColumn>
+                  <TableHeaderColumn>SAT</TableHeaderColumn>
                 </TableRow>
               </TableHeader>
-              <TableBody>
+              <TableBody
+                displayRowCheckbox={false}
+                stripedRows={true}
+                showRowHover={true}
+              >
                 <TableRow>
-                  <TableRowColumn>1</TableRowColumn>
-                  <TableRowColumn>John Smith</TableRowColumn>
-                  <TableRowColumn>Employed</TableRowColumn>
+                  <TableRowColumn>Presidential Elite Scholar</TableRowColumn>
+                  <TableRowColumn>Automatic</TableRowColumn>
+                  <TableRowColumn>Full</TableRowColumn>
+                  <TableRowColumn>4.0</TableRowColumn>
+                  <TableRowColumn>36</TableRowColumn>
+                  <TableRowColumn>1600</TableRowColumn>
                 </TableRow>
               </TableBody>
             </Table>

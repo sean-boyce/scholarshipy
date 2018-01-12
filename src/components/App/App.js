@@ -1,16 +1,26 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-// import { Link } from 'react-router-dom';
-import Dashboard from '../Dashboard/Dashboard';
+import AppHeader from './AppHeader';
+import MenuDrawer from './MenuDrawer';
 import './style.css';
 
 class App extends Component {
+
+  state = {
+    menuDrawerOpen: false,
+  }
+
+  handleMenuDrawerToggle = () => {
+    this.setState({menuDrawerOpen: !this.state.menuDrawerOpen});
+  }
 
   render() {
     const { className, ...props } = this.props;
     return (
       <div className={classnames('App', className)} {...props}>
-        <Dashboard />
+        <AppHeader handleMenuDrawerToggle={this.handleMenuDrawerToggle} />
+
+        <MenuDrawer menuDrawerOpen={this.state.menuDrawerOpen} handleMenuDrawerToggle={this.handleMenuDrawerToggle} />
       </div>
     );
   }

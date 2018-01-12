@@ -3,6 +3,7 @@ import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 // import RaisedButton from 'material-ui/RaisedButton';
 import AppBar from 'material-ui/AppBar';
+import { Link } from 'react-router-dom';
 
 export default class DrawerMenu extends React.Component {
 
@@ -14,8 +15,8 @@ export default class DrawerMenu extends React.Component {
             title="Scholarshipy"
             onLeftIconButtonClick={this.props.handleMenuDrawerToggle}
           />
-          <MenuItem onClick={this.props.handleMenuDrawerToggle}>Scholarships</MenuItem>
-          <MenuItem>Schools</MenuItem>
+          <MenuItem containerElement={<Link to='/' />}>Scholarships</MenuItem>
+          <MenuItem containerElement={<Link to='/schools' />}>Schools</MenuItem>
         </Drawer>
       </div>
     );

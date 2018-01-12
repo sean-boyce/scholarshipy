@@ -5,3 +5,8 @@
 .scholarship-list {
   margin: 20px 256px;
 }
+
+.card-header-icon {
+  justify-content: center;
+  align-items: center;
+}

@@ -1,17 +1,20 @@
 import React from 'react';
 import App from './containers/AppContainer';
+import Dashboard from './components/Dashboard/Dashboard';
 import About from './components/About/About';
 import School from './components/Schools/School';
 
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+// eslint-disable-next-line
+import { BrowserRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 const Routes = () => {
   return (
     <Router>
       <div>
-        <Route exact path="/" component={App} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/school" component={School} />
+        <Route component={App} />
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/schools" component={School} />
+        <Redirect from="*" to="/" />
       </div>
     </Router>
   )
