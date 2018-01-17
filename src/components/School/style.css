@@ -1,16 +1,12 @@
-.scholarship {
+.school {
   margin: 20px;
 }
 
-.scholarship-list {
+.school-list {
   margin: 20px 256px;
 }
 
 .card-header-icon {
   justify-content: center;
   align-items: center;
-}
-
-.scholarship-details {
-  margin: 20px 256px;
 }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 
 import FilterDrawer from './FilterDrawer';
-import ScholarshipList from '../Scholarships/ScholarshipList';
+import SchoolList from '../School/SchoolList';
 
 export default class Dashboard extends Component {
 
@@ -19,7 +19,7 @@ export default class Dashboard extends Component {
       <div>
         <FilterDrawer filterDrawerOpen={this.state.filterDrawerOpen} handleFilterDrawerToggle={this.handleFilterDrawerToggle} />
 
-        <ScholarshipList />
+        <SchoolList />
       </div>
     )
   }

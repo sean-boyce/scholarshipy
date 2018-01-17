@@ -4,8 +4,8 @@ import * as schoolActions from '../../actions/schoolActions';
 // import styles from './style.css';
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux';
-import Scholarship from './Scholarship';
-import toastr from 'toastr';
+import School from './School';
+// import toastr from 'toastr';
 
 class ScholarshipList extends Component {
   state = {
@@ -31,18 +31,16 @@ class ScholarshipList extends Component {
   }
 
   render() {
-    let scholarships = '';
-    this.props.schools ?
-      scholarships = this.props.schools.map((scholarship) => (
-        <Scholarship
-          key={scholarship.id}
-          school={scholarship.name}
-          population={scholarship.type}
+    let schools = this.props.schools ? this.props.schools.map((school) => (
+        <School
+          key={school.id}
+          school={school.name}
+          population={school.type}
         />
       )) : '';
     return (
-      <div className='scholarship-list'>
-        {scholarships}
+      <div className='school-list'>
+        {schools}
       </div>
     );
   }

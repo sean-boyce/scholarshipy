@@ -9,7 +9,7 @@ class Scholarship extends Component {
 
   render() {
     return (
-      <div className="scholarship">
+      <div className="school">
         <Card>
           <CardHeader
             title={this.props.school}
