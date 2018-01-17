@@ -34,11 +34,18 @@ const seedReviews = () => db.Promise.map([
  {rating: 4, review_text: "just like description",product_id:1}
  ], review => db.model('reviews').create(review));
 
+ const seedSchools = () => db.Promise.map([
+   {name: 'University of Alabama',type: 'public', state: 'AL', zip: '35487'},
+   {name: 'Drexel University',type: 'private', state: 'PA', zip: '19104'},
+   {name: 'University of Pennsylvania',type: 'private', state: 'PA', zip: '19104'},
+   {name: 'Villanova University',type: 'private', state: 'PA', zip: '19085'},
+ ], school => db.model('schools').create(school));
+
  db.didSync
    .then(() => db.sync({force: true}))
-   .then(seedProducts)
-   .then(products => console.log(`Seeded ${products.length} products OK`))
-   .then(seedReviews)
-   .then(reviews => console.log(`Seeded ${reviews.length} reviews OK`))
+   .then(seedSchools)
+   .then(schools => console.log(`Seeded ${schools.length} schools OK`))
+   // .then(seedReviews)
+   // .then(reviews => console.log(`Seeded ${reviews.length} reviews OK`))
    .catch(error => console.error(error))
    .finally(() => db.close())

@@ -26,6 +26,7 @@
     "redux-thunk": "^2.2.0",
     "roboto-fontface": "^0.8.0",
     "sequelize": "^4.28.6",
+    "toastr": "^2.1.4",
     "yargs": "^10.0.3"
   },
   "scripts": {

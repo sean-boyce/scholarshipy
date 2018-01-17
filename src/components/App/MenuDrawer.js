@@ -16,7 +16,7 @@ export default class DrawerMenu extends React.Component {
             onLeftIconButtonClick={this.props.handleMenuDrawerToggle}
           />
           <MenuItem containerElement={<Link to='/' />}>Scholarships</MenuItem>
-          <MenuItem containerElement={<Link to='/schools' />}>Schools</MenuItem>
+          <MenuItem containerElement={<Link to='/scholarships' />}>Details</MenuItem>
         </Drawer>
       </div>
     );
